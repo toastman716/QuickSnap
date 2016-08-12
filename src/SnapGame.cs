@@ -26,6 +26,9 @@ namespace CardGames
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
 			{
                 myGame.Start ();
+				SwinGame.LoadSoundEffectNamed ("Yeeha", "yell4yeeha.wav");
+				SwinGame.PlaySoundEffect ("Yeeha");
+		
 			}
 			if(myGame.IsStarted)
 			{
@@ -33,14 +36,20 @@ namespace CardGames
 					&& SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
 					{
 						//TODO: add sound effects
+						SwinGame.LoadSoundEffectNamed ("Heartbeat", "Heartbeat+2.wav");
+					SwinGame.PlaySoundEffect ("Heartbeat");
 					}
 				else if(SwinGame.KeyTyped(KeyCode.vk_LSHIFT))
 				{
+					SwinGame.LoadSoundEffectNamed ("Slurp", "Slurp+3.wav");
+					SwinGame.PlaySoundEffect ("Slurp");
 					myGame.PlayerHit(0);
 				}
 				else if(SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
 				{
 					myGame.PlayerHit(1);
+					SwinGame.LoadSoundEffectNamed ("Slap", "slap.wav");
+					SwinGame.PlaySoundEffect ("Slap");
 				}
 			}
 		}
