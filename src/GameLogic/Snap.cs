@@ -151,6 +151,7 @@ namespace CardGames.GameLogic
 			else if(player >= 0 && player <_score.Length)
 			{
 				_score[player]--;
+			
 			}
 
 			// stop the game...
